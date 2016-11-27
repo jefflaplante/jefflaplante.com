@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jefflaplante 
+  labels:
+    app: jefflaplante 
+spec:
+  replicas: 2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: jefflaplante 
+        tier: nginx
+    spec:
+      containers:
+      - image: jefflaplante/jefflaplante.com 
+        name: jefflaplante 
+        ports:
+        - containerPort: 80 
+          name: jefflaplante 
+        resources:
+          limits:
+            cpu: 100m
+            memory: 50Mi

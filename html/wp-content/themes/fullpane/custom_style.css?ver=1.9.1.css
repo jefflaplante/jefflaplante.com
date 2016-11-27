@@ -1,0 +1,36 @@
+/*  
+Custom CSS styling for Fullpane theme - custom_style.css 
+*/
+
+#footer-tab {
+        position: absolute;
+        width: 30px;
+        height: 15px;
+        left: 50%;
+        margin: 0 0 0 -40px;
+}
+#footer-tab a {
+	background: #eee;
+	color: #111111;
+        width: 50px;
+        height: 15px;
+        font-size: 18px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+}
+#footer-tab a:after {
+        content: '\e805';
+}
+.expanded #footer-tab a:after {
+        content: '—';
+        font-size: 20px;
+}
+/*
+#main-nav a {
+        color: #efefef !important;
+}
+*/

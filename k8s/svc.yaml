@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jefflaplante 
+  labels:
+    app: jefflaplante
+spec:
+  sessionAffinity: ClientIP
+  ports:
+    - port: 80
+      nodePort: 30501
+      targetPort: 80
+  type: NodePort
+  selector:
+    app: jefflaplante
+    tier: nginx
